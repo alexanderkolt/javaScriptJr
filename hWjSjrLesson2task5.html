@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //Задание № 5.
+        
+        function mathOperation(arg1, arg2, operation){
+            let result;
+            switch (operation) {
+                case '+':
+                    result = doSum();
+                    function doSum() {
+                        
+                        return arg1 + arg2;
+                    }
+                    console.log(result)
+                    break;
+                case '-':
+                    result = doDif();
+                    function doDif() {
+                        
+                        return arg1 - arg2;
+                    }
+                    console.log(result)
+                    break;
+                case '/':
+                    result = doDivis();
+                    function doDivis() {
+                        
+                        return arg1 / arg2;
+                    }
+                    console.log(result)
+                    break;
+                case '*':
+                    result = doMult();
+                    function doMult() {
+                        
+                        return arg1 * arg2;
+                    }
+                    console.log(result)
+                    break;
+            }
+        }
+        mathOperation(6,3,'/');
+
+    </script>
+    
+</body>
+</html>
