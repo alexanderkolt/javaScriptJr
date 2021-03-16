@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict'
+
+
+    function getDigitsOfNumber(numb) {
+       
+
+        numb = +prompt("Введите любое целое число в диапазоне [0, 999]");
+            if(numb >= 0 && numb <= 999 && Number.isInteger(numb) && isNaN(numb) == false){
+                return {
+
+                    units: numb % 10,
+                    tens: Math.floor(numb / 10) % 10,
+                    hundreds: Math.floor(numb / 100)
+                };
+            }else if(((numb <= 0 || numb >= 999) || (Number.isInteger(numb) == false)) && isNaN(numb) == false){
+                console.log("Вы ввели не подходящее число.");
+                return {};
+            } else{
+                console.log("Вы ввели не число.");
+                return {}; 
+            };
+            
+    }
+    getDigitsOfNumber();
+    </script>
+</body>
+</html>
